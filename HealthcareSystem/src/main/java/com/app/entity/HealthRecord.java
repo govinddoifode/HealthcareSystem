@@ -11,8 +11,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+=======
+>>>>>>> origin/master
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,13 +27,21 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+<<<<<<< HEAD
 
+=======
+@AllArgsConstructor
+>>>>>>> origin/master
 @Table(name = "health_records")
 public class HealthRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
     private long id;
+=======
+    private Long id;
+>>>>>>> origin/master
 
     @Column(nullable = false)
     private LocalDate date;
@@ -41,6 +52,7 @@ public class HealthRecord {
     @Column(nullable = false)
     private double height;
     
+<<<<<<< HEAD
     @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "patient_id")
@@ -53,5 +65,10 @@ public class HealthRecord {
 		this.height = height;
 	}
     
+=======
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
+    private Patient patient;
+>>>>>>> origin/master
     
 }

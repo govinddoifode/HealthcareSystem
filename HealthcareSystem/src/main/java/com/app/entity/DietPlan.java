@@ -1,8 +1,11 @@
 package com.app.entity;
 import javax.persistence.*;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+=======
+>>>>>>> origin/master
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +25,11 @@ public class DietPlan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
     private long id;
+=======
+    private Long id;
+>>>>>>> origin/master
 
     @ElementCollection
     @CollectionTable(name = "diet_plan_meals", joinColumns = @JoinColumn(name = "diet_plan_id"))
@@ -34,7 +41,10 @@ public class DietPlan {
     @Column(name = "restriction")
     private List<String> restrictions;
 
+<<<<<<< HEAD
     @JsonBackReference
+=======
+>>>>>>> origin/master
     @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;    

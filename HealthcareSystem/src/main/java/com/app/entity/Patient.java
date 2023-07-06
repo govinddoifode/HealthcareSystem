@@ -25,13 +25,21 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+<<<<<<< HEAD
 
+=======
+@AllArgsConstructor
+>>>>>>> origin/master
 @Table(name = "patients")
 public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
     private long patientId;
+=======
+    private Long id;
+>>>>>>> origin/master
 
     @Column(nullable = false)
     private String firstName;
@@ -44,19 +52,32 @@ public class Patient {
 
     @Column(nullable = false)
     private String gender;
+<<<<<<< HEAD
     
+=======
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
+
+>>>>>>> origin/master
     @Column(nullable = false)
     private String phoneNumber;
 
     @Column(nullable = false)
     private String email;
 
+<<<<<<< HEAD
 //    @Column(nullable = false)
 //    private String imagePath;
     
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     private Address address;
+=======
+    @Column(nullable = false)
+    private String imagePath;
+>>>>>>> origin/master
     
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<DietPlan> dietPlans;
@@ -76,6 +97,7 @@ public class Patient {
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<Medication> medications;
 
+<<<<<<< HEAD
 	public Patient(String firstName, String lastName, LocalDate dateOfBirth, String gender, String phoneNumber,
 			String email, Address address) {
 		super();
@@ -89,4 +111,6 @@ public class Patient {
 	}
 
 
+=======
+>>>>>>> origin/master
 }

@@ -9,8 +9,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+=======
+>>>>>>> origin/master
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +25,10 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+<<<<<<< HEAD
+=======
+@AllArgsConstructor
+>>>>>>> origin/master
 
 @Table(name = "exercises")
 public class Exercise {
@@ -36,11 +43,15 @@ public class Exercise {
     @Column(nullable = false)
     private String description;
     
+<<<<<<< HEAD
     @JsonBackReference
+=======
+>>>>>>> origin/master
     @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
+<<<<<<< HEAD
 	public Exercise(String name, String description, Patient patient) {
 		super();
 		this.name = name;
@@ -48,4 +59,6 @@ public class Exercise {
 		this.patient = patient;
 	}
 
+=======
+>>>>>>> origin/master
 }

@@ -11,8 +11,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+=======
+>>>>>>> origin/master
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -51,7 +54,10 @@ public class MedicalInformation {
     @Column(nullable = false)
     private String medications;
     
+<<<<<<< HEAD
     @JsonBackReference
+=======
+>>>>>>> origin/master
     @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;
